@@ -4,8 +4,9 @@ def to_decimal(number_string, original_base):
     for char in number_string:
         number_string[::-1]
         digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        upper_number_string = number_string.upper()
-        char_value = digits.index(upper_number_string)
+        char_upper = char.upper()
+        int(char_upper)
+        char_value = digits[char_upper]
         total_value += (char_value * (original_base ** power))
         power += 1
         return total_value
@@ -16,16 +17,22 @@ def from_decimal(decimal_number, target_base):
     result_string = ""
     while decimal_number > 0:
         remainder = decimal_number % target_base
-        decimal_number = decimal_number // target_base
+        decimal_number = decimal_number / target_base
         digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         char_to_add = digits[remainder]
         result_string = char_to_add + result_string
-        12 // 16
-        char_to_add = digits[12]
-        result_string = 'c' + '7'
+        decimal_number / target_base
+        char_to_also_add = digits[decimal_number]
+        result_string = char_to_also_add + char_to_add
         return result_string
     
 
 
 print("welcome to the hexorcist prepared to get a hexorcisim")
-user_string = input("What is your number string")
+user_string = input("What is your number string: ")
+original_base = input("what is the original base: ")
+target_base = input("what is the base you are trying to get to: ")
+print("your hexed number in base-10 is: ")
+print(to_decimal(user_string, original_base))
+print("the hex you wanted converted is: ")
+print(from_decimal(to_decimal(user_string, original_base), target_base))

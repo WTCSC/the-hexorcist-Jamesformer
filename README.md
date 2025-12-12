@@ -31,7 +31,7 @@ This project does not have any config options at this current time.
 You can use the issues tab in the github page for any bug reporting and issues with the code. You can also use the feedback pull request for any feedback about this project
 
 ## testing
-you can execute the testing files by using pytest -s. the tests will show any errors in the console if present. tests are present in the test_hexorcism.py file. 
+you can execute the testing files by cding into the file and than using pytest -s. the tests will show any errors in the console if present. tests are present in the test_hexorcism.py file. 
 
 ## licence
 this program is licenced under the MIT licence
